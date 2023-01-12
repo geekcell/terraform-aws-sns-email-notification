@@ -1,9 +1,6 @@
 <!-- BEGIN_TF_DOCS -->
 [![Geek Cell GmbH](https://raw.githubusercontent.com/geekcell/template-terraform-module/main/docs/assets/logo.svg)](https://www.geekcell.io/)
 
-<!--
-Comment in these badges if they apply to the repository.
-
 ### Code Quality
 [![License](https://img.shields.io/github/license/geekcell/terraform-aws-sns-email-notification)](https://github.com/geekcell/terraform-aws-sns-email-notification/blob/master/LICENSE)
 [![GitHub release (latest tag)](https://img.shields.io/github/v/release/geekcell/terraform-aws-sns-email-notification?logo=github&sort=semver)](https://github.com/geekcell/terraform-aws-sns-email-notification/releases)
@@ -35,8 +32,6 @@ Comment in these badges if they apply to the repository.
 [![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/geekcell/terraform-aws-sns-email-notification/nist)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=geekcell%2Fterraform-aws-sns-email-notification&benchmark=NIST-800-53)
 [![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/geekcell/terraform-aws-sns-email-notification/hipaa)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=geekcell%2Fterraform-aws-sns-email-notification&benchmark=HIPAA)
 [![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/geekcell/terraform-aws-sns-email-notification/fedramp_moderate)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=geekcell%2Fterraform-aws-sns-email-notification&benchmark=FEDRAMP+%28MODERATE%29)
-
--->
 
 # Terraform AWS SNS E-Mail Module
 
@@ -70,7 +65,7 @@ by providing default values that should make sense for most use cases.
 ## Resources
 
 - resource.aws_sns_topic.main (main.tf#11)
-- resource.aws_sns_topic_subscription.main (main.tf#15)
+- resource.aws_sns_topic_subscription.main (main.tf#17)
 
 # Examples
 ### Full
