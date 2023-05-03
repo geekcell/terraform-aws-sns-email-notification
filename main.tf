@@ -25,6 +25,6 @@ resource "aws_sns_topic_subscription" "main" {
 }
 
 module "kms" {
-  source = "github.com/geekcell/terraform-aws-kms.git?ref=main"
+  source = "github.com/geekcell/terraform-aws-kms?ref=main"
   alias  = var.name
 }
