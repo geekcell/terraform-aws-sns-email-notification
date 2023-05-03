@@ -10,7 +10,7 @@
  */
 resource "aws_sns_topic" "main" {
   name              = var.name
-  kms_master_key_id = module.kms.key_arn
+  kms_master_key_id = module.kms.key_id
 
   tags = var.tags
 }
