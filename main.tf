@@ -9,7 +9,8 @@
  *
  */
 resource "aws_sns_topic" "main" {
-  name = var.name
+  name              = var.name
+  kms_master_key_id = module.kms.key_id
 
   tags = var.tags
 }
@@ -21,4 +22,9 @@ resource "aws_sns_topic_subscription" "main" {
   protocol  = "email"
 
   endpoint = each.value
+}
+
+module "kms" {
+  source = "github.com/geekcell/terraform-aws-kms?ref=main"
+  alias  = var.name
 }
