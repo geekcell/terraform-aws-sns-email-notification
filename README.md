@@ -65,7 +65,7 @@ by providing default values that should make sense for most use cases.
 ## Resources
 
 - resource.aws_sns_topic.main (main.tf#11)
-- resource.aws_sns_topic_subscription.main (main.tf#17)
+- resource.aws_sns_topic_subscription.main (main.tf#18)
 
 # Examples
 ### Full
