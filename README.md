@@ -1,5 +1,5 @@
 <!-- BEGIN_TF_DOCS -->
-[![Geek Cell GmbH](https://raw.githubusercontent.com/geekcell/template-terraform-module/main/docs/assets/logo.svg)](https://www.geekcell.io/)
+[![Geek Cell GmbH](https://raw.githubusercontent.com/geekcell/.github/main/geekcell-github-banner.png)](https://www.geekcell.io/)
 
 ### Code Quality
 [![License](https://img.shields.io/github/license/geekcell/terraform-aws-sns-email-notification)](https://github.com/geekcell/terraform-aws-sns-email-notification/blob/master/LICENSE)
@@ -35,18 +35,19 @@
 
 # Terraform AWS SNS E-Mail Module
 
-This Terraform module creates an AWS SNS Topic for you and adds the email
-addresses as subscribers.
+This Terraform module creates an AWS SNS Topic for you and adds the email addresses as subscribers.
 
-The focus on this module lies within it's simplicity
-by providing default values that should make sense for most use cases.
+The focus on this module lies within it's simplicity by providing default values that should make sense
+for most use cases.
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_email_addresses"></a> [email\_addresses](#input\_email\_addresses) | List of email address for this subscription. | `list(string)` | n/a | yes |
+| <a name="input_enable_sns_sse_encryption"></a> [enable\_sns\_sse\_encryption](#input\_enable\_sns\_sse\_encryption) | Enable Server-Side Encryption of the SNS Topic. | `bool` | `true` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the topic. | `string` | n/a | yes |
+| <a name="input_sns_kms_master_key_id"></a> [sns\_kms\_master\_key\_id](#input\_sns\_kms\_master\_key\_id) | KMS Key ID for Server-Side Encryption of the SNS Topic. If no key is provided, a new one will be created. | `string` | `null` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags to add to the AWS Customer Managed Key. | `map(any)` | `{}` | no |
 
 ## Outputs
@@ -64,8 +65,8 @@ by providing default values that should make sense for most use cases.
 
 ## Resources
 
-- resource.aws_sns_topic.main (main.tf#11)
-- resource.aws_sns_topic_subscription.main (main.tf#18)
+- resource.aws_sns_topic.main (main.tf#9)
+- resource.aws_sns_topic_subscription.main (main.tf#16)
 
 # Examples
 ### Full
