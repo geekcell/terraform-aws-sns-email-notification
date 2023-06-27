@@ -25,8 +25,9 @@ resource "aws_sns_topic_subscription" "main" {
 module "kms" {
   count = var.sns_kms_master_key_id == null ? 1 : 0
 
-  source = "github.com/geekcell/terraform-aws-kms?ref=main"
-  alias  = var.name
+  source  = "geekcell/kms/aws"
+  version = ">= 1.0.0, < 2.0.0"
 
-  tags = var.tags
+  alias = var.name
+  tags  = var.tags
 }
