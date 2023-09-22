@@ -47,7 +47,7 @@ for most use cases.
 | <a name="input_email_addresses"></a> [email\_addresses](#input\_email\_addresses) | List of email address for this subscription. | `list(string)` | n/a | yes |
 | <a name="input_enable_sns_sse_encryption"></a> [enable\_sns\_sse\_encryption](#input\_enable\_sns\_sse\_encryption) | Enable Server-Side Encryption of the SNS Topic. | `bool` | `true` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the topic. | `string` | n/a | yes |
-| <a name="input_sns_kms_master_key_id"></a> [sns\_kms\_master\_key\_id](#input\_sns\_kms\_master\_key\_id) | KMS Key ID for Server-Side Encryption of the SNS Topic. If no key is provided, a new one will be created. | `string` | `null` | no |
+| <a name="input_sns_kms_master_key_id"></a> [sns\_kms\_master\_key\_id](#input\_sns\_kms\_master\_key\_id) | KMS Key ID for Server-Side Encryption of the SNS Topic. | `string` | `"alias/aws/sns"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags to add to the AWS Customer Managed Key. | `map(any)` | `{}` | no |
 
 ## Outputs
