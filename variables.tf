@@ -23,7 +23,7 @@ variable "enable_sns_sse_encryption" {
 }
 
 variable "sns_kms_master_key_id" {
-  default     = null
-  description = "KMS Key ID for Server-Side Encryption of the SNS Topic. If no key is provided, a new one will be created."
+  default     = "alias/aws/sns"
+  description = "KMS Key ID for Server-Side Encryption of the SNS Topic."
   type        = string
 }
