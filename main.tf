@@ -8,7 +8,7 @@
  */
 resource "aws_sns_topic" "main" {
   name              = var.name
-  kms_master_key_id = var.enable_sns_sse_encryption ? coalesce(var.sns_kms_master_key_id, module.kms[0].key_id) : null
+  kms_master_key_id = var.enable_sns_sse_encryption ? try(var.sns_kms_master_key_id, module.kms[0].key_id) : null
 
   tags = var.tags
 }
